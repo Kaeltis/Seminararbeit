@@ -7,7 +7,7 @@
     headsepline=true,       % Trennlinie am Kopf der Seite
     footsepline=false,      % Keine Trennlinie am Fuß der Seite
     bibliography=totoc,     % Literaturverzeichnis in das Inhaltsverzeichnis aufnehmen
-    twoside=on,             % Doppelseitiger Druck - auf off stellen für einseitig
+    twoside=off,            % Doppelseitiger Druck - auf off stellen für einseitig
     DIV=7,                  % Verhältnis der Ränder zum bedruckten Bereich
     chapterprefix=true,     % Kapitel x vor dem Kapitelnamen
     cleardoublepage=plain]{scrbook} 
@@ -183,3 +183,9 @@
 % Flags für Veröffentlichung und Sperrvermerk
 \newboolean{hsmapublizieren}
 \newboolean{hsmasperrvermerk}
+
+% Custom Stuff
+\usepackage{textcomp,gensymb}
+%\newcommand{\source}[1]{}
+%\newcommand{\source}[1]{\caption*{Quelle: {#1}} }
+\newcommand{\source}[1]{\caption*{\hfill Quelle: {#1}} }
